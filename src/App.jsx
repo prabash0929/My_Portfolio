@@ -18,72 +18,78 @@ useEffect(() => {
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <nav className="navbar navbar-expand-lg fixed-top">
-        <div className="container">
-          <a className="navbar-brand fw-bold" href="#home">
-            Prabash<span> Sandakalum</span>
+<nav className="navbar navbar-expand-lg fixed-top">
+  <div className="container">
+
+    <a className="navbar-brand" href="#home">
+      Prabash<span>.</span>
+    </a>
+
+    {/* Mobile Menu Button */}
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#portfolioNavbar"
+      aria-controls="portfolioNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i className="bi bi-list"></i>
+    </button>
+
+    {/* Navbar Links */}
+    <div
+      className="collapse navbar-collapse"
+      id="portfolioNavbar"
+    >
+      <ul className="navbar-nav ms-auto align-items-lg-center">
+
+        <li className="nav-item">
+          <a className="nav-link" href="#home">
+            Home
           </a>
+        </li>
 
+        <li className="nav-item">
+          <a className="nav-link" href="#about">
+            About
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a className="nav-link" href="#skills">
+            Skills
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a className="nav-link" href="#projects">
+            Projects
+          </a>
+        </li>
+
+        <li className="nav-item">
+          <a className="nav-link" href="#contact">
+            Contact
+          </a>
+        </li>
+
+        <li className="nav-item ms-lg-3">
           <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            className="theme-toggle"
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle dark mode"
           >
-            <span className="navbar-toggler-icon"></span>
+            <i
+              className={
+                darkMode
+                  ? "bi bi-sun-fill"
+                  : "bi bi-moon-fill"
+              }
+            ></i>
           </button>
-
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto align-items-lg-center">
-              <li className="nav-item">
-                <a className="nav-link" href="#home">
-                  Home
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#skills">
-                  Skills
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#projects">
-                  Projects
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
-              
-              <li className="nav-item ms-lg-3">
-  <button
-    className="theme-toggle"
-    onClick={() => setDarkMode(!darkMode)}
-    aria-label="Toggle dark mode"
-  >
-    <i
-      className={
-        darkMode
-          ? "bi bi-sun-fill"
-          : "bi bi-moon-fill"
-      }
-    ></i>
-  </button>
-</li>
-
+        </li>
               <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
                 <a
                   className="btn btn-primary nav-contact-btn"
