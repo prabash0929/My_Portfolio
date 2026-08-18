@@ -3,6 +3,47 @@ import "./index.css";
 
 function App() {
 
+const [activeSection, setActiveSection] = useState("home");
+
+useEffect(() => {
+  const handleScroll = () => {
+    const sections = [
+      "home",
+      "about",
+      "skills",
+      "projects",
+      "contact",
+    ];
+
+    const scrollPosition = window.scrollY + 150;
+
+    for (const section of sections) {
+      const element = document.getElementById(section);
+
+      if (element) {
+        const top = element.offsetTop;
+        const height = element.offsetHeight;
+
+        if (
+          scrollPosition >= top &&
+          scrollPosition < top + height
+        ) {
+          setActiveSection(section);
+          break;
+        }
+      }
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
   const [darkMode, setDarkMode] = useState(() => {
   return localStorage.getItem("portfolio-dark-mode") === "true";
 });
@@ -18,16 +59,17 @@ useEffect(() => {
   return (
     <>
       {/* ================= NAVBAR ================= */}
-<nav className="navbar navbar-expand-lg fixed-top">
+     <nav className="navbar navbar-expand-lg fixed-top portfolio-navbar">
   <div className="container">
 
-    <a className="navbar-brand" href="#home">
-      Prabash<span>.</span>
+    {/* Logo */}
+    <a className="navbar-brand portfolio-logo" href="#home">
+      Prabash <span>Sandakalum</span>
     </a>
 
-    {/* Mobile Menu Button */}
+    {/* Mobile Toggle */}
     <button
-      className="navbar-toggler"
+      className="navbar-toggler portfolio-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#portfolioNavbar"
@@ -38,7 +80,7 @@ useEffect(() => {
       <i className="bi bi-list"></i>
     </button>
 
-    {/* Navbar Links */}
+    {/* Navigation */}
     <div
       className="collapse navbar-collapse"
       id="portfolioNavbar"
@@ -46,40 +88,66 @@ useEffect(() => {
       <ul className="navbar-nav ms-auto align-items-lg-center">
 
         <li className="nav-item">
-          <a className="nav-link" href="#home">
-            Home
-          </a>
+        <a
+  className={`nav-link portfolio-link ${
+    activeSection === "home" ? "active" : ""
+  }`}
+  href="#home"
+>
+  Home
+</a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#about">
-            About
-          </a>
+        <a
+  className={`nav-link portfolio-link ${
+    activeSection === "about" ? "active" : ""
+  }`}
+  href="#about"
+>
+  About
+</a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#skills">
-            Skills
-          </a>
+          <a
+  className={`nav-link portfolio-link ${
+    activeSection === "skills" ? "active" : ""
+  }`}
+  href="#skills"
+>
+  Skills
+</a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#projects">
-            Projects
-          </a>
+          <a
+  className={`nav-link portfolio-link ${
+    activeSection === "projects" ? "active" : ""
+  }`}
+  href="#projects"
+>
+  Projects
+</a>
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" href="#contact">
-            Contact
-          </a>
+          <a
+  className={`nav-link portfolio-link ${
+    activeSection === "contact" ? "active" : ""
+  }`}
+  href="#contact"
+>
+  Contact
+</a>
         </li>
 
-        <li className="nav-item ms-lg-3">
+        {/* Theme */}
+        <li className="nav-item theme-item">
           <button
             className="theme-toggle"
             onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle dark mode"
+            aria-label="Toggle theme"
           >
             <i
               className={
@@ -90,18 +158,22 @@ useEffect(() => {
             ></i>
           </button>
         </li>
-              <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
-                <a
-                  className="btn btn-primary nav-contact-btn"
-                  href="#contact"
-                >
-                  Let's Talk
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+        {/* Let's Talk */}
+        <li className="nav-item">
+          <a
+            href="#contact"
+            className="lets-talk-btn"
+          >
+            Let's Talk
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
 
       {/* ================= HERO ================= */}
       <section id="home" className="hero">
