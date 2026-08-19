@@ -42,14 +42,14 @@ section {
   --primary-light: #00a8ff;
   --cyan: #00d9ff;
 
-  /* LIGHT BLUE THEME */
+  /* ================= DARKER LIGHT BLUE THEME ================= */
 
-  --light-bg: #eef7ff;
-  --light-section: #e4f2ff;
-  --light-card: #f8fcff;
-  --light-text: #172033;
-  --light-muted: #5f7185;
-  --light-border: #c9e3f7;
+  --light-bg: #d9ecff;
+  --light-section: #c9e3fa;
+  --light-card: #edf7ff;
+  --light-text: #102033;
+  --light-muted: #4f657a;
+  --light-border: #a9cce9;
 }
 
 
@@ -61,7 +61,7 @@ section {
   height: 82px;
   padding: 0;
 
-  background: rgba(238, 247, 255, 0.95);
+  background: rgba(217, 236, 255, 0.96);
 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -72,7 +72,6 @@ section {
 
   transition: all 0.3s ease;
 }
-
 
 /* =========================================================
    LOGO
@@ -311,18 +310,18 @@ section {
   background:
     radial-gradient(
       circle at 85% 25%,
-      rgba(0, 168, 255, 0.15),
+      rgba(0, 168, 255, 0.18),
       transparent 30%
     ),
     radial-gradient(
       circle at 15% 80%,
-      rgba(8, 120, 232, 0.08),
+      rgba(8, 120, 232, 0.12),
       transparent 30%
     ),
     linear-gradient(
       135deg,
-      #eef7ff 0%,
-      #dff1ff 100%
+      #d9ecff 0%,
+      #c7e3fa 100%
     );
 
   position: relative;
@@ -625,7 +624,8 @@ section {
    ABOUT
 ========================================================= */
 
-.about-section {
+.about-section,
+.projects-section {
   background: var(--light-bg);
 }
 

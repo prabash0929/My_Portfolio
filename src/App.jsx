@@ -45,7 +45,15 @@ useEffect(() => {
 }, []);
 
   const [darkMode, setDarkMode] = useState(() => {
-  return localStorage.getItem("portfolio-dark-mode") === "true";
+  const savedMode = localStorage.getItem("portfolio-dark-mode");
+
+  // First visit → Dark Mode
+  if (savedMode === null) {
+    return true;
+  }
+
+  // Returning visitor → saved preference
+  return savedMode === "true";
 });
 
 useEffect(() => {
@@ -53,7 +61,7 @@ useEffect(() => {
 
   localStorage.setItem(
     "portfolio-dark-mode",
-    darkMode
+    darkMode.toString()
   );
 }, [darkMode]);
   return (
