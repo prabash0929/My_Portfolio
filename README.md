@@ -6,6 +6,14 @@ This portfolio showcases my skills, projects, education, interests, and contact 
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **View the live portfolio:**
+
+https://my-portfolio-sage-six-56.vercel.app/
+
+---
+
 ## 🌐 About the Project
 
 This is a modern and responsive personal portfolio website designed to present my technical skills, development projects, and professional profile in a clean and user-friendly interface.
