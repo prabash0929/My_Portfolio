@@ -131,8 +131,6 @@ You can add screenshots of the portfolio here.
 
 ```text
 screenshots/
-├── home.png
-├── about.png
-├── skills.png
-├── projects.png
-└── contact.png
+<img width="1440" height="900" alt="Screenshot 2026-08-18 at 23 20 13" src="https://github.com/user-attachments/assets/0db582d9-7fdc-4c2b-af45-1657715940f3" />
+
+
