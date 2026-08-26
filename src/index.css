@@ -2263,3 +2263,25 @@ body.dark-mode .contact-form-card {
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
+/* =====================================================
+   MOBILE NAVBAR + HERO SPACING
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* Fixed navbar එකට ඉඩ දෙන්න */
+  .hero {
+    padding-top: 90px;
+  }
+
+  /* Hero content එක තව ටිකක් පහළට */
+  .hero-content {
+    padding-top: 30px;
+  }
+
+  /* HELLO, I'M */
+  .hero-small {
+    margin-top: 15px;
+  }
+
+}
