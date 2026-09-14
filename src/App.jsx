@@ -375,7 +375,7 @@ function App() {
 
 
                   <a
-                    href="mailto:prabashsandakalum0207@gmail.com"
+                    href="mailto:prabashsdehiwaththa@gmail.com"
                     aria-label="Email"
                   >
                     <i className="bi bi-envelope"></i>
@@ -1259,9 +1259,9 @@ function App() {
                     Email
                   </h5>
 
-                  <a href="mailto:prabashsandakalum0207@gmail.com">
+                  <a href="mailto:prabashsdehiwaththa@gmail.com">
 
-                    prabashsandakalum0207@gmail.com
+                    prabashsdehiwaththa@gmail.com
 
                   </a>
 
@@ -1603,7 +1603,7 @@ function App() {
                 {/* Email */}
 
                 <a
-                  href="mailto:prabashsandakalum0207@gmail.com"
+                  href="mailto:prabashsdehiwaththa@gmail.com"
                   aria-label="Email"
                 >
 
@@ -1634,6 +1634,7 @@ function App() {
               </strong>.
 
               {" "}
+
               All Rights Reserved.
 
             </p>
