@@ -1384,9 +1384,9 @@ function App() {
                 {/* ================= FORMSPREE FORM ================= */}
 
                 <form
-                  action="https://formspree.io/f/xbgrnpek"
-                  method="POST"
-                >
+  action="https://formspree.io/f/xjyvqljr"
+  method="POST"
+>
 
                   <div className="row g-3">
 
